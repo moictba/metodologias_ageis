@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Requisitos de Softwares</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Metodologias Ágeis</h1>
+
+  <nav>
+     <ul>
+      <li><button class="item active" onclick="mostrarSecao('xp')">XP</button></li>
+      <li><button class="item" onclick="mostrarSecao('fdd')">FDD</button></li>
+      <li><button class="item" onclick="mostrarSecao('kanban')">Kanban</button></li>
+      <li><button class="item" onclick="mostrarSecao('crystal')">Crystal</button></li>
+      <li><button class="item" onclick="mostrarSecao('msf')">MSF</button></li>
+      <li><button class="item" onclick="mostrarSecao('nome')">Desenvolvedores</button></li>
+    </ul>
+  <div class="dot"></div>
+  </nav>
+
+  <main>
+    <section id="conteudo">
+      <h2>Bem-vindo!</h2>
+      <p>Aqui você poderá aprender sobre as diversas Metodologias Ágeis, escolha um acima para saber mais sobre.</p> <br>
+      <p>Moisés Bezerra da Silva: 60010984</p>
+      <p>Lucas Chaves Martini: 60003718</p>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    function mostrarSecao(secao, botaoClicado) {
+      const conteudo = document.getElementById("conteudo");
+      let titulo = "", texto = "";
+
+      switch (secao) {
+              case "xp":
+          titulo = "Extreme Programming (XP)";
+          texto = `
+            <h3>Contextualização geral</h3>
+            <p>O XP (Extreme Programming) é uma metodologia ágil, focada no desenvolvimento de software, que possui valores e princípios fundamentais para um conjunto de práticas.</p>
+            <p>O XP possui um conjunto de princípios e valores, onde os princípios tendem a ser mais concretos que os valores. O conjunto de valores serve como critério que norteia as pessoas envolvidas no desenvolvimento do software, além de se complementarem. São eles: comunicação, simplicidade, feedback, coragem e respeito.</p>
+            <p>Além desses valores, existe um conjunto de princípios que deve ser seguido por equipes que forem usar XP em projetos, sendo: feedback rápido, presumir simplicidade, aceitar mudanças, alta qualidade de trabalho, melhoria contínua, diversidade e reflexão.</p>
+
+            <h3>Fases de processo</h3>
+            <ul>
+              <li><strong>Cliente presente –</strong> O cliente deve participar ativamente do processo de desenvolvimento, para ter clareza sobre a intenção dos programadores e esclarecer o que deseja. Ele deve acompanhar o progresso do sistema e ser informado sobre mudanças de planos. Para os programadores, é importante escutar as demandas do cliente para saber o que deve ser feito no sistema para atender às suas expectativas.</li>
+              <li><strong>Planejamento –</strong> O desenvolvimento utilizando o XP é feito em iterações. Uma iteração é um período curto de tempo (1 ou 2 semanas), onde a equipe desenvolve um conjunto de funcionalidades. No início da semana, desenvolvedores e clientes se reúnem para priorizar as funcionalidades. Essa reunião chama-se jogo de planejamento, e nela já devem estar criadas as histórias. Se uma história for muito grande, ela deve ser dividida em tarefas com duração máxima de alguns dias. Essas histórias devem ser escritas pelo cliente, pois assim ele consegue pensar melhor em cada funcionalidade.</li>
+              <li><strong>Stand Up Meeting –</strong> São reuniões de curta duração, porém produtivas, para que o time se mantenha alinhado, saiba o que cada um está fazendo no projeto, em qual fase o projeto se encontra e se alguém está com dificuldade para executar suas tarefas. Essa reunião não tem o propósito de encontrar soluções.</li>
+              <li><strong>Programação em Par –</strong> É uma programação em dupla em uma única máquina. Como é só uma máquina, o software é visto por duas visões, diminuindo as possibilidades de falhas e melhorando o código-fonte, além de agregar muito ao trabalho em equipe.</li>
+              <li><strong>Testes Constantes –</strong> É utilizado o método de desenvolvimento orientado a testes (TDD), criando primeiro os testes unitários e depois o código para que o teste funcione. É uma abordagem complexa no início, mas essencial para que a qualidade do projeto seja mantida.</li>
+              <li><strong>Refatoração –</strong> É um processo que permite a melhoria contínua da programação, com mínimo risco de introdução de erros e mantendo compatibilidade com o código já existente. Refatorar melhora a clareza, a leitura do código e facilita a manutenção. Além disso, o código fica mais coeso, evitando duplicação no código-fonte.</li>
+              <li><strong>Código coletivo –</strong> Diz que o código-fonte não tem dono e ninguém precisa solicitar permissão para modificá-lo. O objetivo é fazer a equipe conhecer todas as partes do sistema.</li>
+              <li><strong>Padronização do código –</strong> Como todo mundo trabalha no desenvolvimento do mesmo software, a equipe precisa estabelecer regras para programar e todos devem segui-las, assim o código parece ter sido escrito por uma única pessoa. A padronização também evita confusão e problemas futuros na revisão do código.</li>
+              <li><strong>Design simples –</strong> Essa prática segue o princípio da simplicidade, focando no que o usuário está pedindo. O design do software acaba sendo mais simples, e o software fica mais fácil de alterar sem comprometer a qualidade.</li>
+              <li><strong>Metáfora –</strong> Facilita a comunicação com o cliente, entendendo sua realidade e traduzindo suas palavras para o significado esperado dentro do projeto.</li>
+              <li><strong>Ritmo sustentável –</strong> Manter um ritmo de trabalho constante, com qualidade, onde a equipe esteja atenta e disposta.</li>
+              <li><strong>Integração contínua –</strong> Sempre que for produzida uma nova funcionalidade, não se deve esperar uma semana para integrá-la à versão atual do sistema. Integrar de forma contínua permite saber o status real da programação e evita conflitos e erros no código-fonte.</li>
+              <li><strong>Releases curtos –</strong> As liberações de pequenas versões funcionais do projeto auxiliam no processo de aceitação pelo cliente, que pode testar partes do sistema antes do produto completo. Esses releases são menores que os produzidos em outras metodologias incrementais, como o RUP.</li>
+            </ul>
+
+            <h3>Componentes humanos envolvidos</h3>
+            <ul>
+              <li><strong>Programadores –</strong> São os que colocam a mão no código. No XP, eles trabalham em dupla (pair programming), trocando ideias e revisando o que o outro faz, além de testar e melhorar o código constantemente.</li>
+              <li><strong>Cliente –</strong> Representa quem vai usar o sistema. Ele participa junto à equipe, diz o que é mais importante, escreve as histórias e responde dúvidas, evitando que o time se perca no que precisa ser feito.</li>
+              <li><strong>Testadores –</strong> Ajudam a garantir que o sistema funcione corretamente, fazendo testes junto aos programadores e detectando problemas antes que cheguem ao usuário final.</li>
+              <li><strong>Coach –</strong> É o “mentor” da equipe. Lembra todo mundo de seguir os valores do XP (como comunicação, simplicidade, feedback e respeito) e dá apoio para que o time use bem as práticas ágeis.</li>
+              <li><strong>Tracker –</strong> Acompanha o andamento do projeto, verifica se os prazos estão sendo cumpridos e fornece feedback para que a equipe melhore.</li>
+              <li><strong>Gerente –</strong> Ajuda a equipe a trabalhar sem obstáculos, remove problemas do caminho e protege o time de pressões externas.</li>
+            </ul>
+
+            <h3>Vantagens e desvantagens</h3>
+            <ul>
+              <li><strong>Vantagens do XP:</strong> O XP faz o software ficar pronto mais rápido porque o trabalho é feito em partes pequenas. O cliente participa sempre, então problemas aparecem e são resolvidos rapidamente. O código fica melhor devido aos testes e à programação em dupla. Dá para mudar coisas no projeto sem bagunçar tudo, e a equipe aprende e troca ideias o tempo todo.</li>
+              <li><strong>Desvantagens do XP:</strong> Também há pontos negativos. Se o cliente não estiver disponível, o projeto pode travar. Pode sair mais caro por causa do trabalho em dupla e do pessoal dedicado. Projetos grandes ou complexos podem ser difíceis de organizar. A documentação costuma ser menor, pois o foco é no código funcionando. E se a equipe não seguir as regras direitinho, a qualidade do projeto cai.</li>
+            </ul>
+          `;
+          break;
+        case "fdd":
+          titulo = "Feature-Driven Development (FDD)";
+          texto = `
+            <h3>Contextualização geral</h3>
+            <p>O FDD (Feature Driven Development) é uma metodologia ágil que foca em desenvolver software por funcionalidades. A ideia é entregar valor pro cliente rápido, desenvolvendo pequenas partes do sistema em poucos dias. É bastante usado em projetos grandes, porque organiza bem o trabalho, permite entregas constantes e mantém a comunicação clara entre equipe e cliente.</p>
+
+            <h3>Fases de processo</h3>
+            <ul>
+              <li><strong>Modelo geral</strong> – Criar um modelo do sistema, mostrando as principais necessidades do cliente.</li>
+              <li><strong>Lista de funcionalidades</strong> – Listar todas as funcionalidades do sistema de forma simples e clara.</li>
+              <li><strong>Planejamento</strong> – Organizar prioridades, distribuir tarefas e definir a ordem de desenvolvimento das funcionalidades.</li>
+              <li><strong>Detalhamento</strong> – Especificar cada funcionalidade antes de começar a programar, evitando dúvidas.</li>
+              <li><strong>Implementação</strong> – Programar, testar e integrar cada funcionalidade, entregando pronta ao cliente em ciclos curtos.</li>
+            </ul>
+          
+            <h3>Componentes humanos envolvidos</h3>
+            <ul>
+              <li><strong>Chief Architect</strong> – Cuida da arquitetura geral do sistema.</li>
+              <li><strong>Chief Programmer</strong> – Lidera o desenvolvimento técnico.</li>
+              <li><strong>Project Manager</strong> – Acompanha prazos e recursos do projeto.</li>
+              <li><strong>Development Manager</strong> – Supervisiona o andamento do desenvolvimento.</li>
+              <li><strong>Class Owners</strong> – Responsáveis pelas classes do sistema.</li>
+              <li><strong>Domain Experts</strong> – Especialistas que validam os requisitos do negócio.</li>
+              <li><strong>Build Engineers</strong> – Fazem a integração e compilação do sistema.</li>
+              <li><strong>QA/Testers</strong> – Garantem a qualidade, fazendo testes constantes.</li>
+            </ul>
+          
+            <h3>Vantagens e desvantagens</h3>
+            <ul>
+              <li><strong>Vantagens</strong> – Entregas rápidas; bom para projetos grandes; foco na qualidade; colaboração forte entre equipe e especialistas do negócio.</li>
+              <li><strong>Desvantagens</strong> – Precisa de mais gente envolvida; pode ser burocrático em projetos pequenos; depende bastante da modelagem inicial, que se mudar muito, dá retrabalho.</li>
+            </ul>
+          `;
+          break;
+        case "kanban":
+          titulo = "Kanban";
+          texto = `
+            <h3>Contextualização geral</h3>
+            <p>O Kanban é uma metodologia ágil voltada para gerenciamento de tarefas e fluxos de trabalho. A ideia principal é visualizar o que precisa ser feito, o que está em andamento e o que já foi concluído, usando cartões e quadros. É muito usado para organizar equipes de desenvolvimento de software, mas também funciona para qualquer tipo de projeto ou processo.</p>
+            <p>Ele ajuda a melhorar a produtividade, reduzir gargalos e garantir que todos saibam exatamente o que está acontecendo em cada etapa do trabalho, sem sobrecarregar ninguém.</p>
+
+            <h3>Fases de processo</h3>
+            <ul>
+              <li><strong>Visualizar o fluxo</strong> – Criar um quadro com colunas que representem as etapas do trabalho, como “A Fazer”, “Em Progresso” e “Concluído”.</li>
+              <li><strong>Limitar trabalho em andamento</strong> – Definir quantas tarefas podem estar em cada etapa ao mesmo tempo, evitando sobrecarga e garantindo foco.</li>
+              <li><strong>Gerenciar o fluxo</strong> – Acompanhar o progresso das tarefas e ajustar o ritmo para que o trabalho flua de maneira eficiente.</li>
+              <li><strong>Tornar processos explícitos</strong> – Definir regras claras sobre como cada tarefa deve avançar no quadro.</li>
+              <li><strong>Melhoria contínua</strong> – Revisar periodicamente o processo e fazer ajustes para aumentar produtividade e qualidade.</li>
+            </ul>
+          
+            <h3>Componentes humanos envolvidos</h3>
+            <ul>
+              <li><strong>Equipe</strong> – Executa as tarefas e mantém o quadro atualizado.</li>
+              <li><strong>Gestor ou Scrum Master (opcional)</strong> – Ajuda a remover impedimentos e manter o fluxo eficiente.</li>
+              <li><strong>Stakeholders/Cliente</strong> – Podem acompanhar o progresso e dar feedback sobre prioridades.</li>
+            </ul>
+          
+            <h3>Vantagens e desvantagens</h3>
+            <ul>
+              <li><strong>Vantagens</strong> – Visualização clara do trabalho; maior foco e produtividade; ajuda a identificar gargalos; flexível e fácil de usar em qualquer tipo de projeto.</li>
+              <li><strong>Desvantagens</strong> – Funciona melhor com equipes disciplinadas; não define prazos automaticamente; pode ser confuso se o quadro ficar muito grande ou desorganizado.</li>
+            </ul>
+          `;
+          break;
+        case "crystal":
+          titulo = "Crystal";
+          texto = `
+            <h3>Contextualização geral</h3>
+            <p>O Crystal é uma família de metodologias ágeis focada na simplicidade, comunicação e adaptação ao tamanho e criticidade do projeto. Cada projeto recebe uma “cor” dentro do Crystal (como Crystal Clear, Crystal Orange, etc.), que indica o nível de rigor e processos necessários.</p>
+            <p>O Crystal valoriza pessoas e interações mais do que ferramentas e documentos, e prioriza entregas frequentes de software funcional. Ele é ideal para equipes que precisam de flexibilidade e querem adaptar processos ao contexto específico do projeto.</p>
+                  
+            <h3>Fases de processo</h3>
+            <ul>
+              <li><strong>Planejamento</strong> – Definir objetivos, prioridades e funcionalidades principais, garantindo que todos entendam o que precisa ser entregue.</li>
+              <li><strong>Ciclos de entrega curtos</strong> – Dividir o projeto em iterações curtas, entregando software funcional regularmente.</li>
+              <li><strong>Comunicação constante</strong> – Manter interação frequente entre todos os membros da equipe e stakeholders, garantindo alinhamento.</li>
+              <li><strong>Revisão e adaptação</strong> – Após cada iteração, avaliar o progresso, identificar melhorias e ajustar processos conforme necessário.</li>
+              <li><strong>Documentação mínima</strong> – Produzir apenas a documentação necessária para apoiar o desenvolvimento, sem burocracia.</li>
+            </ul>
+           
+            <h3>Componentes humanos envolvidos</h3>
+            <ul>
+              <li><strong>Sponsoring Executive</strong> – Patrocinador do projeto, garante recursos e suporte.</li>
+              <li><strong>Senior Designer/Programmer</strong> – Responsável pelo design e desenvolvimento principais.</li>
+              <li><strong>Team Members</strong> – Desenvolvedores que implementam as funcionalidades.</li>
+              <li><strong>User/Customer</strong> – Usuário ou cliente que fornece feedback contínuo.</li>
+              <li><strong>Coach (opcional)</strong> – Auxilia a equipe a seguir boas práticas e melhorar processos.</li>
+            </ul>
+           
+            <h3>Vantagens e desvantagens</h3>
+            <ul>
+              <li><strong>Vantagens</strong> – Flexível e adaptável a diferentes projetos; foco em comunicação e pessoas; entregas frequentes de software funcional; minimiza burocracia.</li>
+              <li><strong>Desvantagens</strong> – Pode ser pouco estruturado para projetos muito grandes; depende da disciplina e colaboração da equipe; pouca orientação formal pode gerar inconsistências.</li>
+            </ul>
+                  `;
+          break;
+        case "msf":
+          titulo = "MSF (Microsoft Solutions Framework)";
+          texto = `
+            <h3>Contextualização geral</h3>
+            <p>O MSF (Microsoft Solutions Framework) é uma metodologia de desenvolvimento de software criada pela Microsoft que fornece um conjunto de diretrizes, práticas e modelos para gerenciar projetos de TI. O foco do MSF é garantir entregas de qualidade, com processos claros e flexíveis, adaptando-se às necessidades específicas de cada projeto.</p>
+            <p>Ele combina boas práticas de gerenciamento de projetos com desenvolvimento ágil, permitindo que equipes de diferentes tamanhos e complexidades trabalhem de forma organizada, colaborativa e eficiente.</p>
+                  
+            <h3>Fases de processo</h3>
+            <ul>
+              <li><strong>Envisioning (Visão do projeto)</strong> – Definir objetivos, escopo e visão do projeto, garantindo que todos entendam o que precisa ser entregue.</li>
+              <li><strong>Planning (Planejamento)</strong> – Planejar cronograma, recursos, riscos e responsabilidades, criando um guia para o desenvolvimento.</li>
+              <li><strong>Developing (Desenvolvimento)</strong> – Implementar soluções de software, seguindo padrões e boas práticas do MSF.</li>
+              <li><strong>Stabilizing (Estabilização)</strong> – Testar, ajustar e corrigir problemas antes da entrega final, garantindo qualidade.</li>
+              <li><strong>Deploying (Implantação)</strong> – Entregar a solução ao cliente, acompanhando a implementação e oferecendo suporte inicial.</li>
+            </ul>
+          
+            <h3>Componentes humanos envolvidos</h3>
+            <ul>
+              <li><strong>Project Manager</strong> – Coordena o projeto, recursos e prazos.</li>
+              <li><strong>Team Leader</strong> – Lidera tecnicamente a equipe de desenvolvimento.</li>
+              <li><strong>Programmers/Developers</strong> – Criam o software conforme especificações.</li>
+              <li><strong>Testers/QA</strong> – Garantem qualidade, realizando testes e validações.</li>
+              <li><strong>Client/Stakeholders</strong> – Fornecem requisitos, feedback e validação do projeto.</li>
+            </ul>
+          
+            <h3>Vantagens e desvantagens</h3>
+            <ul>
+              <li><strong>Vantagens</strong> – Flexível e adaptável a diferentes tipos de projetos; combina boas práticas de gerenciamento e desenvolvimento; foca na qualidade e na entrega eficiente; promove colaboração entre equipe e cliente.</li>
+              <li><strong>Desvantagens</strong> – Pode ser complexo para equipes pequenas; exige disciplina para seguir processos; menos conhecido fora do ecossistema Microsoft, o que pode dificultar a adoção.</li>
+            </ul>
+          `;
+          break;
+
+        case "nome":
+          titulo = "Desenvolvedores";
+          texto = ` 
+          <p>Moisés Bezerra da Silva: 60010984</p>
+          <p>Lucas Chaves Martini: 60003718
+            
+          `;
+          break;
+        default:
+          titulo = "Bem-vindo!";
+          texto = "Escolha uma metodologia acima para visualizar seus requisitos.";
+      }
+
+      conteudo.innerHTML = `<h2>${titulo}</h2><p>${texto}</p>`;
+
+      $('.item').removeClass('active');
+      $(botaoClicado).addClass('active');
+
+      const li = $(botaoClicado).parent();
+      const offset = li.position().left;
+      const width = li.outerWidth();
+      const color = $(botaoClicado).css('background-color');
+
+      $('.dot').css({
+        left: offset + width / 2,
+        backgroundColor: color
+      });
+    }
+
+    $(document).ready(function () {
+      const activeLi = $('nav ul .active').parent();
+      const offset = activeLi.position().left;
+      const width = activeLi.outerWidth();
+      const color = $('nav ul .active').css('background-color');
+
+      $('.dot').css({
+        left: offset + width / 2,
+        backgroundColor: color
+      });
+    });
+
+    $('nav').mouseleave(function () {
+      const activeLi = $('nav ul .active').parent();
+      const offset = activeLi.position().left;
+      const width = activeLi.outerWidth();
+      const color = $('nav ul .active').css('background-color');
+
+      $('.dot').css({
+        left: offset + width / 2,
+        backgroundColor: color
+      });
+    });
+
+    $('nav ul li').hover(function () {
+      const offset = $(this).position().left;
+      const width = $(this).outerWidth();
+      const color = $(this).find('.item').css('background-color');
+
+      $('.dot').css({
+        left: offset + width / 2,
+        backgroundColor: color
+      });
+    });
+  </script>
+</body>
+</html>
